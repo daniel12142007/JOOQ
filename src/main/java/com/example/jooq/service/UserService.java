@@ -1,21 +1,20 @@
 package com.example.jooq.service;
 
 import com.example.jooq.model.User;
+import lombok.RequiredArgsConstructor;
 import org.jooq.DSLContext;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 
 import java.util.List;
 
 import static com.example.jooq.generated.Users.USERS;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
-    @Autowired
-    private DSLContext dslContext;
+    private final DSLContext dslContext;
 
     @Transactional(readOnly = true)
     public List<User> getAllUsers() {

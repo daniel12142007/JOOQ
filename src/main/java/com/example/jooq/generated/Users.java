@@ -1,6 +1,5 @@
 package com.example.jooq.generated;
 
-import io.r2dbc.spi.Parameter;
 import org.jooq.TableField;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
